@@ -1,0 +1,103 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Keeps things neat */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;            /* Flexbox in nav 💪 */
+  justify-content: center;  /* Center links */
+  gap: 20px;                /* Space between links */
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FLEXBOX SECTION */
+.flex-section {
+  display: flex;           /* Flex container */
+  justify-content: space-around; /* Items spaced evenly */
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+.flex-item {
+  flex: 1;                /* Equal space for each item */
+  margin: 10px;
+  padding: 20px;
+  background: #2196F3;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* GRID SECTION */
+.grid-section {
+  display: grid;                 /* CSS Grid 💖 */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 15px;
+  padding: 2rem;
+}
+
+.grid-item {
+  background: #FF5722;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* MEDIA QUERIES 📱 */
+@media (max-width: 1024px) {
+  /* Tablet view */
+  nav ul {
+    flex-direction: column;  /* Stack menu */
+  }
+
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Mobile view */
+  .flex-section {
+    flex-direction: column; /* Stack flex items */
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  h1 {
+    font-size: 20px; /* Smaller heading */
+  }
+}
